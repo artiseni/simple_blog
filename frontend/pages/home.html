@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <button id="displayButton" type="button">Display data</button>
+    <p id="pageText">Ini adalah index</p>
+
+    <button id="set">Set</button>
+    <p id="hit">0</p>
+
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <script src="jquery/event.js"></script>
+    <script>
+
+        if(theName !== null){
+            $('#pageText').text(`Hi, ${theName}`)
+        } else {
+            location.replace("./login.html") 
+        }
+
+        // const btnV = document.getElementById('set')
+
+        // if(btnV.clicked == true){
+        //     alert('Hi')
+        // }
+
+    </script>
+</body>
+</html>

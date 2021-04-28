@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css">
+    <title>login</title>
+    <style>
+        .container {
+            position: relative;
+        }
+        .index-card {
+            padding-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 15%);
+        }
+        .btn-center {
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+        .card-body h5 {
+            text-align: center;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="POST">
+            <div class="card index-card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Signup</h5>
+                  <form>
+                    <div class="mb-3">
+                        <label class="form-label">Your name</label>
+                        <input type="text" class="form-control" id="inputSuName" name="logSuName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="inputSuEmail" name="logSuEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputSuPass1" name="logSuButton1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Re-type Password</label>
+                        <input type="password" class="form-control" id="inputSuPass2" name="logSuButton2">
+                    </div>
+                    <div class="btn-center">
+                          <a href="#" class="btn btn-primary" id="btnSignup">Signup</a>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <script src="jquery/event.js"></script>
+</body>
+</html>
