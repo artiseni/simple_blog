@@ -18,7 +18,16 @@
 
     <script src="../js/jquery-3.6.0.js"></script>
     <script src="../js/event.js"></script>
+    
     <script>
+
+        if(theName !== null){
+            $('#pageText').text(`Hi, ${theName}`)
+        } else {
+            location.replace("./login.html") 
+        }
+
+    </script>
 
 </body>
 </html>
