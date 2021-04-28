@@ -43,8 +43,6 @@ $('#displayButton').on('click', function(){
 
 let theName = sessionStorage.getItem(`theName`)
 
-// console.log(theName)
-
 // ================== SignUp ================
 
 
@@ -92,30 +90,10 @@ $('#btnLogin').on('click', function(e){
         name : loName.val(),
         pass : loPass.val()
     }
-    // console.log(getData)
     getRespons()
-    // postData()
 })
 
 let key = sessionStorage.getItem('change')
-
-// console.log("key : " + key)
-function postData(){
-    $.ajax({
-        type : 'POST',
-        url  : localhost + 'login',
-        contentType : 'application/json',
-        dataType : 'json',
-        data : JSON.stringify(key),
-        success : function(addStr) {
-            console.log("Result " + addStr)
-        },
-        error : function(e){
-            console.error(e)
-        }
-    })
-}
-
 
 function getRespons(){
     let empty = ''
@@ -150,7 +128,6 @@ function getRespons(){
             console.log(e)
         }
     })
-    // console.log('ini adalah ' + str)
 }
 
 function validate(length) { 
@@ -164,7 +141,7 @@ function validate(length) {
 } 
 
 
-//==================== verifyed ================
+//==================== verify ================
 
 let displayString = $('#txtRetype')
 let inputString = $('#inputString')
@@ -179,7 +156,6 @@ function checkButton(){
 $('#btnVerif').on('click', function(){
 
     if(valid == inputString.val()){
-        // console.log("Sama!")
         location.replace("./home.html") 
     } else {
         alert("Invalid!")
