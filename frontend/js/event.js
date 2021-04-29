@@ -202,9 +202,9 @@ $('#btnSignup').on('click', function(e){
             name : $lName.val(),
             email: $lEmail.val(),
             pass : $lPass1.val(),
-            date1: "",
-            date2: "",
-            date3: "",
+            date1: validate(5),
+            date2: validate(5),
+            date3: validate(5),
             tittle1: "",
             tittle2: "",
             tittle3: "",
@@ -213,7 +213,7 @@ $('#btnSignup').on('click', function(e){
             paragraph3: ""
         }
         const data = JSON.stringify(passData)
-        // console.log(data)
+     
         $.ajax({
             type : 'POST',
             url  : localhost + 'signup',
@@ -291,7 +291,7 @@ function validate(length) {
 } 
 
 
-//==================== verifyed ================
+//==================== verified ================
 
 let displayString = $('#txtRetype')
 let inputString = $('#inputString')
