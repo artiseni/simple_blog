@@ -33,16 +33,24 @@ const users = {
     },
 
     userName(rq, rs){
-        
-        // asych
         fs.readFile(dataJson, 'utf-8',(e, data)=>{
             rs.end(JSON.stringify(data))
         })
-
-        // sych
-        // let data = JSON.stringify(addJson)
-        // rs.end(data)
     },
+
+    userData(rq, rs){
+        fs.readFile(dataJson, 'utf-8',(e, data)=>{
+            rs.end(data)
+        })
+    },
+
+    edit(rq, rs){
+        params.post(rq, (r) => {
+            const data = JSON.stringify(r, null, 2)  
+            editData(data)
+            rs.end()
+        })
+    }
 }
 
 function pushData(data) {
@@ -54,6 +62,15 @@ function pushData(data) {
     } catch (e) {
         console.log('Error : ' + e)
     }
+}
+
+// edit
+
+function editData(data){
+    let editBlog = JSON.parse(data)
+    fs.writeFile(dataJson, JSON.stringify(editBlog, null, 2), e => {
+        if(e) throw e
+    })
 }
 
 function changeData(data){
