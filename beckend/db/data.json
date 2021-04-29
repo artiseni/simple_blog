@@ -3,48 +3,28 @@
     "name": "Imin",
     "email": "Imin@g.g",
     "pass": "555",
-    "strv": "7ITrkq"
+    "date1": "Fri Apr 30 2021 00:48:18 GMT+0700 (Western Indonesia Time)",
+    "date2": "Fri Apr 30 2021 00:48:47 GMT+0700 (Western Indonesia Time)",
+    "date3": "Fri Apr 30 2021 00:48:54 GMT+0700 (Western Indonesia Time)",
+    "tittle1": "How to print hello world in java 9",
+    "tittle2": "How to print hello world in c",
+    "tittle3": "How to print hello world in python",
+    "paragraph1": "java 9",
+    "paragraph2": "printf('Hello, world!')",
+    "paragraph3": "print('Hello world!')"
   },
   {
     "name": "1212",
     "email": "eee@i.d",
     "pass": "1212",
-    "strv": ""
-  },
-  {
-    "name": "heho",
-    "email": "eett@i.d",
-    "pass": "heho",
-    "strv": ""
-  },
-  {
-    "name": "kuda",
-    "email": "eee@i.d",
-    "pass": "kuda",
-    "strv": ""
-  },
-  {
-    "name": "teguh",
-    "email": "eee@i.d",
-    "pass": "111",
-    "strv": ""
-  },
-  {
-    "name": "teguh3",
-    "email": "eee@i.d",
-    "pass": "111",
-    "strv": ""
-  },
-  {
-    "name": "fikri",
-    "email": "eee@i.d",
-    "pass": "111",
-    "strv": ""
-  },
-  {
-    "name": "ajay",
-    "email": "eee@i.d",
-    "pass": "qqq",
-    "strv": ""
+    "date1": "4",
+    "date2": "5",
+    "date3": "6",
+    "tittle1": "How to print hello world in javaScript",
+    "tittle2": "How to print hello world in php",
+    "tittle3": "How to print hello world in nodeJs",
+    "paragraph1": "javaScript",
+    "paragraph2": "echo \"Hello, world!\"",
+    "paragraph3": "nodeJS"
   }
 ]
