@@ -36,7 +36,6 @@ http.createServer((rq, rs) => {
             switch (url) {
                 case '/login':
                     users.login(rq, rs)
-                    users.change(rq, rs)
                 break;
                 case '/signup':
                     users.signup(rq, rs)
