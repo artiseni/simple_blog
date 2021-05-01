@@ -17,21 +17,11 @@ const users = {
     login(rq, rs){
         params.post(rq, (r) => {
             if(r){
-                getUser(r)
-                const user = JSON.stringify(fs.readFileSync(dataJson, 'utf-8'))
-                rs.end(user)
-            }
-            rs.end()
+                validateUser(r, rs)
+            } 
         })
     },
-
-    change(rq, rs){   
-        params.post(rq, (r) => {
-            rs.end(changeData(r))
-        })    
-        
-    },
-
+    
     userName(rq, rs){
         fs.readFile(dataJson, 'utf-8',(e, data)=>{
             rs.end(JSON.stringify(data))
@@ -73,24 +63,30 @@ function editData(data){
     })
 }
 
-function changeData(data){
-    fs.writeFileSync(dataJson, data)
-}
-
-
-function getUser(data) {
+function validateUser(data, rs) {
     const name = data.name
     const pass = data.pass
+    let dataName = ''
+    let dataPass = ''
   
-    jServer.every(element => {
-        if(name === element.name && pass === element.pass) {
-            let str = `Selamat datang ${element.name}`
-            console.log(str)
-            return true
+    fs.readFile(dataJson, (err, dataStr) => {
+        if (err) throw err
+        let parsData = JSON.parse(dataStr)
+        parsData.forEach(e => {
+            if(e.name === name && e.pass === pass){
+                dataName = e.name
+                dataPass = e.pass
+            }
+        });
+
+        if(name === dataName && pass === dataPass){
+            rs.end(JSON.stringify(data))
+        } else {
+            rs.statusCode = 401
+            rs.end(JSON.stringify({ message: "Not found" }))
         }
-        // console.log(`Invalid`)
-        return false
     })
+
 }
 
 
