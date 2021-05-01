@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    // bootstrap offline
-    
-    <link rel="stylesheet" href="../css/bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Home</title>
     <style>
 
         #btn-src {
             position: absolute;
             right: 5px;
-            top: 4.5px;
+            top: 6px;
         }
         .navbar{
             z-index: 1;
@@ -30,9 +27,12 @@
             top: 80px;
             margin: 40px;
             margin-bottom: 10px;
-            border-color: salmon;
         }
-
+        .cards-containerAll{
+            top: 80px;
+            margin: 40px;
+            margin-bottom: 10px;
+        }
         #model {
             width: 100%;
             height: 100%;
@@ -44,21 +44,29 @@
             transform: translate(-50%, 35%);
             display: none;
         }
-
+        .container-login-regist {
+            position: fixed;
+            top: 10px;
+            left: 140px;
+            z-index: 1;
+        }
+        .btn-center {
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+        .card-body h5 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light justify-content-between">
         <h2 id="userAdmin">Home</h2>
-        <form class="form-inline">
-          <input id="form-src" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <div id="btn-src">
-              <button id="btn-src" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-          </div>
-        </form>
     </nav>
     <br><br>
     <div class="cards-container"></div> 
+    <div class="cards-containerAll"></div> 
 
     <!-- modal -->
 
@@ -75,6 +83,14 @@
             <a class="btn btn-primary btnSave" name = "btnSave" >save</a>
             <a class="btn btn-primary btnClose" name = "btnClose" >close</a>
         </div>
+    </div>
+
+
+    <div class="container-login-regist">  
+        <div class="btn-center">
+            <a href="#" class="btn btn-light" id="loginIndex">login</a>
+            <a href="#" class="btn btn-light" id="signUpIndex">signup</a>
+        </div> 
     </div>
 
 
