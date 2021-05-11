@@ -105,7 +105,7 @@ function filterDta(data){
         newData.paragraph3 = data[i].paragraph3
         arrData.push(newData)
     }
-    return JSON.stringify(arrData)
+    return JSON.stringify(arrData, null, 2)
 }
 
 function editData(data){
