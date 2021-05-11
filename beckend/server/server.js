@@ -56,5 +56,3 @@ http.createServer((rq, rs) => {
 }).listen(port, () => {
     console.log(`Server is listening on port ${port}`)
 })
-
-
